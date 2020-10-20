@@ -9,7 +9,9 @@ bot.on('ready', () => {
 });
 bot.on('message', message => {
     if (message.content === 'bot.check') message.reply('Bot Working');
-    if (message.content === 'bot.error') message.reply('<@221029766235553792> boss if u could assist me please!');
+    if (message.content === 'bot.error') message.channel.send('<@221029766235553792> boss if u could assist me please!').then(r => {
+        bot.users.cache.get("221029766235553792").send("Error on Revive Community");
+    })
     
     if (message.content === 'bot.avatar') {
       message.channel.send(`**This is your avi:**`)
