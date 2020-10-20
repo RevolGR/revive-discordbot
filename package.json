@@ -1,0 +1,22 @@
+{
+  "name": "revive-discordbot",
+  "version": "1.0.0",
+  "description": "Revive-Discordbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RevolGR/revive-discordbot.git"
+  },
+  "author": "Revol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RevolGR/revive-discordbot/issues"
+  },
+  "homepage": "https://github.com/RevolGR/revive-discordbot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
