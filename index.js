@@ -57,6 +57,19 @@ bot.on('message', message => {
   }
 });
 bot.on('message', message => {
+        let userdata = message.content.slice('').trim().split(' ');
+        if (message.content.includes('!bot.manualforward')){
+                message.channel.send('➡️Redirecting...');
+                let channel = bot.channels.cache.get("768140186247757876")
+                bot.channels.cache.get("768231681047265281").send(`New application approved by an administrator!`);
+                channel.messages.fetch(`${userdata[1]}`).then(message => {
+                        bot.channels.cache.get("768231681047265281").send(message.embeds)      
+                bot.channels.cache.get("768231681047265281").send(`Vote here`);
+                bot.channels.cache.get("768231681047265281").send(`=======================================================================================`);
+                });   
+        }
+    });
+bot.on('message', message => {
         if(message.content === `Vote here`) {
                 message.react('650356018118656000').then(r => {
                         message.react('650355996920774657');
